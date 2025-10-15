@@ -1,1 +1,75 @@
-/*# sourceMappingURL=styles.css.map */
+.important {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.important__wrapper {
+  display: flex;
+  width: 600px;
+  height: 400px;
+  background: repeating-conic-gradient(from var(--a), #01dbc2 0%, #01dbc2 10%, transparent 10%, transparent 50%);
+  animation: rotated 5s linear infinite;
+  box-shadow: 5px 5px 10px black;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 30px;
+  flex-direction: column;
+  position: relative;
+  border-radius: 20px;
+}
+.important__wrapper::before {
+  width: 640px;
+  height: 440px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  content: "";
+}
+.important__switcher {
+  margin: 0 0 0 auto;
+  border: 3px solid #63b3de;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #cce3ef;
+  transition: background-color 0.5s ease-in;
+  color: #0b0b0b;
+  transition: color 0.5s ease-in;
+}
+.important__switcher:hover {
+  background-color: #2298d8;
+  transition: background-color 0.3s ease-in;
+  color: #fff;
+  transition: color 0.2s ease-in;
+}
+.important__buttons {
+  display: flex;
+  z-index: 2;
+}
+.important__add {
+  padding: 10px;
+  background-color: #92d69b;
+  border: 3px solid #e3e58f;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in;
+}
+.important__add:hover {
+  background-color: #48e5cb;
+  transition: background-color 0.3s ease-in;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes rotated {
+  0% {
+    --a: 0deg ;
+  }
+  100% {
+    --a: 360deg ;
+  }
+}/*# sourceMappingURL=styles.css.map */

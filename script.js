@@ -1,4 +1,5 @@
-const wrapperEl = document.querySelector(".important__list")
+const listEl = document.querySelector(".important__list")
+const wrapperEl = document.querySelector(".important__wrapper")
 
 
 const createButton = (btnName, parentEl) => {
@@ -7,4 +8,5 @@ const createButton = (btnName, parentEl) => {
     parentEl.append(btn)
 }
 
-//const addBTn = createButton("Add") // add parent el
+//const addBTn = createButton("Add", wrapperEl )
+//const removeBTn = createButton("Remove", wrapperEl )
