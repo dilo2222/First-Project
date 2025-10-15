@@ -46,6 +46,10 @@
 }
 .important__buttons {
   display: flex;
+}
+.important__inner {
+  display: flex;
+  flex-direction: column;
   z-index: 2;
 }
 .important__add {
@@ -58,6 +62,10 @@
 .important__add:hover {
   background-color: #48e5cb;
   transition: background-color 0.3s ease-in;
+}
+.important__list {
+  padding: 0;
+  list-style: none;
 }
 
 @property --a {
@@ -72,4 +80,72 @@
   100% {
     --a: 360deg ;
   }
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 150px;
+  background: linear-gradient(90deg, #7cffd8, #8dfaa1);
+  z-index: 5;
+  border-radius: 20px;
+  padding: 20px;
+}
+.popup__title {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0 auto 30px;
+}
+.popup__input {
+  margin: 0 auto;
+  border: 2px solid red;
+  padding: 5px;
+  width: 200px;
+  border-radius: 5px;
+  outline: none;
+  background: linear-gradient(-90deg, #6cea83, #fff);
+}
+.popup__input:hover {
+  border: 2px solid blue;
+  background-color: #ede2e2;
+}
+.popup__input:focus-visible {
+  border: 2px solid blue;
+}
+.popup__input::-moz-placeholder {
+  font-size: 15px;
+}
+.popup__input::placeholder {
+  font-size: 15px;
+}
+.popup__buttons {
+  margin: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.popup__buttons .btn {
+  background-image: linear-gradient(90deg, #7997f0, #d67575);
+  border-radius: 10px;
+  padding: 10px;
+}
+.popup__buttons .btn:hover {
+  background-image: linear-gradient(90deg, #d67575, #7997f0);
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(32, 10, 10, 0.541);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

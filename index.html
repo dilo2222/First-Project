@@ -16,18 +16,29 @@
         <section class="important">
             <h1 class="important__title">To Do App</h1>
             <div class="important__wrapper">
-                <div class="important__buttons">
-                    <button class="important__add">Add a Note</button>
+                <div class="important__inner">
+                    <div class="important__buttons">
+                        <button class="important__add">Add a Note</button>
+                        <button class="important__switcher">Switch Theme</button>
+                    </div>
+                    <ul class="important__list">
 
-                <button class="important__switcher">Swtich Theme</button>
+                    </ul>
                 </div>
-                <ul class="important__list">
-
-                </ul>
 
             </div>
 
         </section>
+        <div class="overlay hidden"></div>
+        <div class="popup hidden">
+            <p class="popup__title">Write your task</p>
+            <input class="popup__input" type="text" placeholder="text here">
+            <div class="popup__buttons">
+                <button class="btn popup_add">Add Task</button>
+                <button class="btn popup_remove">Cancel</button>
+            </div>
+
+        </div>
 
     </main>
     <footer>
