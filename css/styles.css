@@ -18,15 +18,14 @@
   position: relative;
   border-radius: 20px;
 }
-.important__wrapper::before {
+.important__overlay {
   width: 640px;
   height: 440px;
   top: 10px;
   left: 10px;
-  position: absolute;
   background-color: white;
   border-radius: 10px;
-  content: "";
+  position: absolute;
 }
 .important__switcher {
   margin: 0 0 0 auto;
@@ -35,14 +34,10 @@
   border-radius: 10px;
   background-color: #cce3ef;
   transition: background-color 0.5s ease-in;
-  color: #0b0b0b;
-  transition: color 0.5s ease-in;
 }
 .important__switcher:hover {
   background-color: #2298d8;
   transition: background-color 0.3s ease-in;
-  color: #fff;
-  transition: color 0.2s ease-in;
 }
 .important__buttons {
   display: flex;
@@ -66,6 +61,14 @@
 .important__list {
   padding: 0;
   list-style: none;
+}
+.important .dark {
+  background-color: #615e5e;
+  color: white;
+}
+.important__item {
+  display: flex;
+  justify-content: center;
 }
 
 @property --a {
