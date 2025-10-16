@@ -15,7 +15,6 @@ const editcancelEl = document.querySelector(".edit_remove")
 const editinputEl = document.querySelector(".edit__input")
 const editoverlayEl = document.querySelector(".edit__overlay")
 
-let currentEditSpan = null
 
 editcancelEl.addEventListener("click", function (e) {
     editoverlayEl.classList.toggle("hidden")
@@ -81,29 +80,33 @@ switchEl.addEventListener("click", function (e) {
         switchEl.classList.toggle("dark")
 })
 
+let holder;
+
 listEl.addEventListener("click", function (e) {
     if (e.target.classList.contains("important__remove")) {
         const liEl = e.target.closest(".important__item")
         liEl.remove()
         editinputEl.value = ""
     } else if (e.target.classList.contains("important__edit")) {
-        editEl.classList.toggle("hidden")
-        editoverlayEl.classList.toggle("hidden")
-        const li = e.target.closest(".important__item")
-        const span = li.querySelector(".important__span")
+        const item = e.target.closest(".important__item")
+        const text = item.querySelector(".important__span")
 
-        currentEditSpan = span
-        editinputEl.value = span.textContent
+        holder = text
+        editinputEl.value = text.textContent
+         editoverlayEl.classList.toggle("hidden")
+    editEl.classList.toggle("hidden")
+
     }
 })
 
+
+
 editAddEl.addEventListener("click", function (e) {
-    if (!editinputEl.value || !currentEditSpan) return
-    currentEditSpan.textContent = editinputEl.value
+    holder.textContent = editinputEl.value
     editoverlayEl.classList.toggle("hidden")
     editEl.classList.toggle("hidden")
-    currentEditSpan = null
     editinputEl.value = ""
+    holder = null
 })
 
 
