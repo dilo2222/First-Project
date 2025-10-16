@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
 
+
     &__wrapper {
         display: flex;
         width: 600px;
@@ -17,17 +18,17 @@
         flex-direction: column;
         position: relative;
         border-radius: 20px;
+        overflow: hidden;
     }
 
     &__overlay {
-            width: 640px;
-            height: 440px;
-            top: 10px;
-            left: 10px;
-            background-color: white;
-            border-radius: 10px;
-            position: absolute;
-        }
+        position: absolute;
+        inset: 10px;
+        background-image: linear-gradient(180deg, #9ae0b4, #a3cff8);
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 1;
+    }
 
     &__switcher {
         margin: 0 0 0 auto;
@@ -45,11 +46,17 @@
 
     &__buttons {
         display: flex;
+        width: 100%;
+        flex-grow: 1;
+        margin: 0 0 20px;
     }
 
     &__inner {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
         z-index: 2;
     }
 
@@ -69,26 +76,60 @@
     &__list {
         padding: 0;
         list-style: none;
+        width: 600px;
+        margin: 0 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        overflow-y: auto;
+        max-height: 350px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
     }
 
     .dark {
-        background-color: #615e5e;
+        background-image: linear-gradient(180deg, #525252, #464545);
         color: white;
     }
 
-    &__item {
+    .dark__wrapper {
+        background-color: #353535;
+    }
+
+    &__div {
+        display: flex;
+        justify-content: space-between;
+        background-image: linear-gradient(90deg, #97ffc9, #e66565);
+        padding: 10px;
+        color: #3d411a;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    &__edit {
+        margin: 0 0 0 auto;
+        border: 3px solid #63b3de;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: #cce3ef;
+        transition: background-color 0.5s ease-in;
+
+        &:hover {
+            background-color: #2298d8;
+            transition: background-color 0.3s ease-in;
+        }
+    }
+
+    &__span {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
 }
-
-
-
-
-
-
 
 
 

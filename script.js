@@ -8,8 +8,9 @@ const cancelEl = document.querySelector(".popup_remove")
 const inputEl = document.querySelector(".popup__input")
 const switchEl = document.querySelector(".important__switcher")
 
-
 const addBtn = document.querySelector(".important__add")
+
+
 addBtn.addEventListener("click", function (e) {
     overlayEl.classList.toggle("hidden")
     popEl.classList.toggle("hidden")
@@ -25,21 +26,23 @@ function createSpan(name) {
     const spanEl = document.createElement("span")
     spanEl.classList.add("important__span")
     spanEl.textContent = name
+    return spanEl
 }
-
-const now = new Date()
-const hours = now.getHours()
-const minutes = now.getMinutes()
 
 
 addEl.addEventListener("click", function (e) {
     if (inputEl.value) {
         const liEl = document.createElement("li")
         liEl.classList.add("important__item")
-        const valued = createSpan(inputEl.value)
-        const timed = createSpan(hours, minutes)
-        liEl.textContent = `${inputEl.value} - ${hours}:${minutes}`
         listEl.append(liEl)
+        const divContainer = document.createElement("div")
+        divContainer.classList.add("important__div")
+        const spanValue = createSpan(inputEl.value)
+        const btnEdit = document.createElement("button")
+        btnEdit.classList.add("important__edit")
+        btnEdit.textContent = "Edit"
+        divContainer.append(spanValue, btnEdit)
+        liEl.append(divContainer)
         overlayEl.classList.toggle("hidden")
         popEl.classList.toggle("hidden")
         inputEl.value = ""
@@ -51,7 +54,7 @@ addEl.addEventListener("click", function (e) {
 
 
 switchEl.addEventListener("click", function (e) {
-    wrapperEl.classList.toggle("dark"),
+    wrapperEl.classList.toggle("dark__wrapper"),
         overlayed.classList.toggle("dark"),
         addBtn.classList.toggle("dark"),
         switchEl.classList.toggle("dark")
