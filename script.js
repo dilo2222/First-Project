@@ -7,8 +7,13 @@ const addEl = document.querySelector(".popup_add")
 const cancelEl = document.querySelector(".popup_remove")
 const inputEl = document.querySelector(".popup__input")
 const switchEl = document.querySelector(".important__switcher")
-
 const addBtn = document.querySelector(".important__add")
+
+const editEl = document.querySelector(".popup")
+const editAddEl = document.querySelector(".popup_add")
+const editcancelEl = document.querySelector(".popup_remove")
+const editinputEl = document.querySelector(".popup__input")
+
 
 
 addBtn.addEventListener("click", function (e) {
@@ -59,3 +64,7 @@ switchEl.addEventListener("click", function (e) {
         addBtn.classList.toggle("dark"),
         switchEl.classList.toggle("dark")
 })
+
+
+
+    
