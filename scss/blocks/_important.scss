@@ -123,10 +123,31 @@
         }
     }
 
+
+    &__remove {
+         margin: 0 0 0 auto;
+        border: 3px solid #63b3de;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: #cce3ef;
+        transition: background-color 0.5s ease-in;
+
+        &:hover {
+            background-color: #2298d8;
+            transition: background-color 0.3s ease-in;
+        }
+    }
+
     &__span {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &__divBtn {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
     }
 
 }

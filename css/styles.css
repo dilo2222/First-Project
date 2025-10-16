@@ -106,10 +106,27 @@
   background-color: #2298d8;
   transition: background-color 0.3s ease-in;
 }
+.important__remove {
+  margin: 0 0 0 auto;
+  border: 3px solid #63b3de;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #cce3ef;
+  transition: background-color 0.5s ease-in;
+}
+.important__remove:hover {
+  background-color: #2298d8;
+  transition: background-color 0.3s ease-in;
+}
 .important__span {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.important__divBtn {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
 }
 
 @property --a {
@@ -194,7 +211,7 @@
   display: none;
 }
 
-.popup2 {
+.edit {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -208,12 +225,12 @@
   border-radius: 20px;
   padding: 20px;
 }
-.popup2 .popup2__title {
+.edit__title {
   font-size: 20px;
   line-height: 20px;
   margin: 0 auto 30px;
 }
-.popup2 .popup2__input {
+.edit__input {
   margin: 0 auto;
   border: 2px solid red;
   padding: 5px;
@@ -222,34 +239,34 @@
   outline: none;
   background: linear-gradient(-90deg, #6cea83, #fff);
 }
-.popup2 .popup2__input:hover {
+.edit__input:hover {
   border: 2px solid blue;
   background-color: #ede2e2;
 }
-.popup2 .popup2__input:focus-visible {
+.edit__input:focus-visible {
   border: 2px solid blue;
 }
-.popup2 .popup2__input::-moz-placeholder {
+.edit__input::-moz-placeholder {
   font-size: 15px;
 }
-.popup2 .popup2__input::placeholder {
+.edit__input::placeholder {
   font-size: 15px;
 }
-.popup2 .popup2__buttons {
+.edit__buttons {
   margin: auto 0 0;
   display: flex;
   justify-content: space-between;
 }
-.popup2 .popup2__buttons .btn {
+.edit__buttons .btn {
   background-image: linear-gradient(90deg, #7997f0, #d67575);
   border-radius: 10px;
   padding: 10px;
 }
-.popup2 .popup2__buttons .btn:hover {
+.edit__buttons .btn:hover {
   background-image: linear-gradient(90deg, #d67575, #7997f0);
 }
 
-.overlay2 {
+.edit__overlay {
   position: fixed;
   background-color: rgba(32, 10, 10, 0.541);
   top: 0;
@@ -259,6 +276,6 @@
   z-index: 4;
 }
 
-.hidden2 {
+.hidden {
   display: none;
 }/*# sourceMappingURL=styles.css.map */
